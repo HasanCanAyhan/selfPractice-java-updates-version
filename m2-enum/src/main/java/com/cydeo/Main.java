@@ -46,6 +46,21 @@ public class Main {
 
         calculate(2,3,Operation.PLUS);
 
+        System.out.println("-----------------------------------");
+
+        Apple a = new Apple(5);
+
+
+        System.out.println("How to retrieve the constant value");
+
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.QUARTER.getValue());
+
+        //ordinal method : it returns index number.
+
+        System.out.println(Currency.QUARTER.ordinal()); // 3 : index number like Array index
+        // PENNY(1),NICKLE(5),DIME(10),QUARTER(25);
+        //    0         1         2        3
 
 
     }

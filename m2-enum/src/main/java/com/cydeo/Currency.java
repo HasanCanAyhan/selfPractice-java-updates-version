@@ -12,11 +12,19 @@ public enum Currency {
 
     // Enum can be easily used in switch
 
-    PENNY,NICKLE,DIME,QUARTER;
+    PENNY(1),NICKLE(5),DIME(10),QUARTER(25);
 
     // PENNY is an object of currency class
 
+    private int value;
 
+    Currency(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 
 
 }
