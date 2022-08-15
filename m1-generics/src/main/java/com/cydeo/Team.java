@@ -3,8 +3,13 @@ package com.cydeo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team<T> { // T is generics
+public class Team<T extends Player > { // T is generics
     // T - can be any class - SoccerPlayer, FootballPlayer, BasketballPlayer
+
+    // Team should accept only PLayer class and subclasses
+    // T is child of Player
+
+
 
     private String name;
 

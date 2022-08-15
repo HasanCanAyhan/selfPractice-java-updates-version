@@ -35,6 +35,15 @@ public class Main { // <Class Name> generics
 
         // but problem is liverpool is a soccer team, it should only accept soccer player, not baseball-football players
 
+        //-----------------------------------------------------------
+
+
+        // Team<T extends Player > : T is child class of Player Class
+
+        //Team<String> brokenTeam = new Team<>("what kind of team is this ?"); -- error
+        //Team<Integer> t2 = new Team<>("very weird"); -- error
+
+
 
 
 
