@@ -44,6 +44,13 @@ public class Main { // <Class Name> generics
         //Team<Integer> t2 = new Team<>("very weird"); -- error
 
 
+        // K,V,T,E  : key to identify generics
+
+        // we are putting type restriction on class or interfaces with <>
+
+        // myClass implements/extends CrudRepository<Apple, 1> { }
+        //                                   class name, unique ID
+
 
 
 
