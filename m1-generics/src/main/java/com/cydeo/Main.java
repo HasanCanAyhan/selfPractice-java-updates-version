@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Banana,Customer,Student,String,Integer : we should use filtering
 
         ArrayList items = new ArrayList();
         items.add(1);
