@@ -2,7 +2,7 @@ package com.cydeo;
 
 import java.util.ArrayList;
 
-public class Main { // <Class Name>
+public class Main { // <Class Name> generics
 
     public static void main(String[] args) { // Banana,Customer,Student,String,Integer : we should use filtering
 
@@ -23,7 +23,7 @@ public class Main { // <Class Name>
 
     }
 
-    private static void printDoubled(ArrayList items) {
+    private static void printDoubled(ArrayList<Integer> items) {
 
         for ( Object  i :  items){
             System.out.println( (Integer) i * 2);
