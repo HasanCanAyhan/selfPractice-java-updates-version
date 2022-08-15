@@ -2,15 +2,22 @@ package com.cydeo;
 
 import java.util.ArrayList;
 
-public class Main {
+public class Main { // <Class Name>
 
     public static void main(String[] args) { // Banana,Customer,Student,String,Integer : we should use filtering
 
-        ArrayList items = new ArrayList();
+        //ArrayList items = new ArrayList();
+
+
+        ArrayList<Integer> items = new ArrayList();
+        // ArrayList only accept objects belongs to Integer class
+
+
         items.add(1);
         items.add(2);
         items.add(3);
-        items.add("Apple");
+        //items.add("Apple");
+
 
         printDoubled(items);
 
