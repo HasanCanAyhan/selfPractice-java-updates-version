@@ -1,6 +1,7 @@
 package com.cydeo;
 
 public enum Currency {
+    // enum is static - final , that`s why we can not put abstract and abstract methods inside it.
 
     //Enum may implement many interfaces but can not extend any class
     //because it internally extends Enum class(java.lang.Enum)
@@ -14,6 +15,8 @@ public enum Currency {
     PENNY,NICKLE,DIME,QUARTER;
 
     // PENNY is an object of currency class
+
+
 
 
 }
