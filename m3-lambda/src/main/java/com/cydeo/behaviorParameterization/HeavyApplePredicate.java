@@ -1,8 +1,9 @@
 package com.cydeo.behaviorParameterization;
 
-public class HeavyApple implements AppleFilter{
+public class HeavyApplePredicate implements ApplePredicate {
+
     @Override
-    public boolean findApple(Apple apple) {
+    public boolean test(Apple apple) {
         return apple.getWeight() > 200;
     }
 }

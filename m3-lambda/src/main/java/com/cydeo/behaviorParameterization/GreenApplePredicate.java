@@ -1,9 +1,9 @@
 package com.cydeo.behaviorParameterization;
 
-public class GreenApple implements AppleFilter{
+public class GreenApplePredicate implements ApplePredicate {
 
     @Override
-    public boolean findApple(Apple apple) {
+    public boolean test(Apple apple) {
         return apple.getColor().equals(Color.GREEN);
     }
 }
