@@ -21,6 +21,25 @@ public class AppTest {
 
         message(membersList,new MaleMembers(),"Fine");
 
+        System.out.println("------------------------------------");
+
+        System.out.println("With Lambda:");
+
+        FeatureInterface test1 = members ->  members.getGender() == Gender.MALE;
+
+        message(membersList,test1,"good job");
+
+        FeatureInterface test2 = members -> {
+
+            if (members.getGender() == Gender.MALE){
+                return members.getAge() > 18 && members.getAge() < 25;
+            }
+            return false;
+        };
+
+        message(membersList,test2,"I am fine thanks");
+
+
     }
 
     private static void message(List<Members> membersList, FeatureInterface featureInterface,String message){
