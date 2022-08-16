@@ -67,3 +67,12 @@ public class Main {
 
 
 }
+/*
+In software engineering, user requirements will change.
+
+Example : Imagine an application to help a farmer understand his inventory.
+- Find all green apples in the inventory
+- Find all apples heavier than 200 g
+
+As a developer, we have to minimize our engineering effort.
+ */
