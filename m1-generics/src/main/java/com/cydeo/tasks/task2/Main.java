@@ -7,6 +7,12 @@ public class Main { // QS 2
 
     public static void main(String[] args) {
 
+        // create Interface(generic)
+        // create class implementing Interface
+        // create method
+        // get result
+
+
         List<Integer> ci = Arrays.asList(1, 2, 3, 4);
         int count = countIf(ci, new OddPredicate());
         //int count2 = countIf(ci, new EvenPredicate());
