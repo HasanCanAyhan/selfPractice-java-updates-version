@@ -7,8 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Behavior Parameterization : the ability to tell a method to take
-        //multiple behaviors (strategies)
+        //Behavior Parameterization : the ability to tell a method to take multiple behaviors (strategies)
 
         // interface
         // class which implement interface
