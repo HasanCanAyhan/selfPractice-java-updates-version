@@ -2,7 +2,7 @@ package com.cydeo.tasks;
 
 import java.util.Arrays;
 
-public class Task1 {
+public class SwapValuesTask { // Task 1
 
     public static void main(String[] args) {
 
@@ -14,6 +14,10 @@ public class Task1 {
 
 
         swap(c,0,2);
+
+
+        //or second method
+        //System.out.println(Arrays.toString(a));
 
     }
 
@@ -39,6 +43,19 @@ public class Task1 {
 
 
     }
+
+
+    /* another solution
+    private static <T> void swap(T[] a , int i, int j){ // generics method
+
+        T temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+
+
+    }
+
+     */
 
 
 }
