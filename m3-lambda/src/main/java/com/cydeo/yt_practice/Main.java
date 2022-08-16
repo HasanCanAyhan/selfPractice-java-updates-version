@@ -20,7 +20,18 @@ public class Main {
             System.out.println("Hello World!");
             System.out.println("It is a nice day " + x +y);
         };
+
         myInterface.message(name,symbol);
+
+        System.out.println("------------------");
+
+        MyInterface myInterface2 = (x,y) -> {
+            System.out.println("Hello " + x+y);
+        };
+
+        myInterface2.message(name,symbol);
+
+
 
 
     }
