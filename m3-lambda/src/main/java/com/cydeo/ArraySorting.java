@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import java.util.function.Predicate;
+
 public class ArraySorting { // QuickSort,BubbleSort
 
     public static void main(String[] args) {
@@ -21,7 +23,18 @@ public class ArraySorting { // QuickSort,BubbleSort
         sorting.sort();
          */
 
+        System.out.println("-------------------");
 
+        //with lambda
+
+        Sorting quickSort = () -> System.out.println("Quick Sorting");
+        as.sort(quickSort);
+
+        //as.sort(() -> System.out.println("Quick Sorting")); same thing
+
+        // we are trying to pass action directly to method -> (sort method here), with ready Interface, functional interface
+
+        // with java 8 - you have access to bunch of ready functional interface.
 
     }
 

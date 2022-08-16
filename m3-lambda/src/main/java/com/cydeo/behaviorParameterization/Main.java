@@ -41,6 +41,18 @@ public class Main {
         System.out.println(greenApple);
          */
 
+        System.out.println("------------------");
+
+        // with the lambda
+
+        ApplePredicate heavyApple = (Apple apple) -> apple.getWeight() > 200;
+        //if the parameter is one, then you can write it ==>>>  ApplePredicate heavyApple = apple -> apple.getWeight() > 200;
+        filterApple(inventory,heavyApple);// pass to method
+
+        ApplePredicate greenApple = (Apple apple) -> apple.getColor().equals(Color.GREEN);
+        filterApple(inventory,greenApple);// pass to method
+
+
 
     }
 
