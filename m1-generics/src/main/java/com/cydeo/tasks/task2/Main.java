@@ -20,6 +20,7 @@ public class Main { // QS 2
 
 
         //UnaryPredicate unaryPredicate = new OddPredicate();
+        //UnaryPredicate unaryPredicate = new EvenPredicate(); it can be also...
 
     }
 
