@@ -7,10 +7,9 @@ public class Cat implements Printable{
 
     public Cat(){}
 
+
     @Override
-    public void print() {
-        System.out.println("Meow");
+    public void print(String suffix) {
+        System.out.println("Meow " + suffix);
     }
-
-
 }

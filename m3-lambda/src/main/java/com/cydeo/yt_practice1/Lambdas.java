@@ -5,16 +5,24 @@ public class Lambdas {
     public static void main(String[] args) {
 
 
-        Cat myCat = new Cat();
+        //Cat myCat = new Cat();
         //myCat.print();
 
-        printThing(myCat);
+        //printThing(myCat);
+
+
+        //printThing( () -> System.out.println("Meow"));
+
+        Printable lambdaPrintable = (s) -> System.out.println("Meow " + s) ;
+        printThing(lambdaPrintable);
+
+
 
     }
 
 
     public static void printThing(Printable thing){
-        thing.print();
+        thing.print("!");
     }
 
 
