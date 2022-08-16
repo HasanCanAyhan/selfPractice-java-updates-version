@@ -2,7 +2,7 @@ package com.cydeo.tasks;
 
 import java.util.Arrays;
 
-public class SwapValuesTask { // Task 1
+public class SwapValuesTask1 { // Task 1
 
     public static void main(String[] args) {
 

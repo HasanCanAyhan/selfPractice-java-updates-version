@@ -22,7 +22,8 @@ public class Main { // QS 2
     }
 
     //Write a generic method to count the number of elements in a collection
-    public static <T> int countIf(List<T> list , UnaryPredicate<T> unaryPredicate ){
+    public static <T> int countIf(List<T> list , UnaryPredicate<T> unaryPredicate ){ // we should this method generics, in order to use in the different Type....
+        //                                      it should be parent class interface
         int count = 0;
 
         for (T each : list) {
