@@ -32,6 +32,12 @@ public class Main {
         myInterface2.message(name,symbol);
 
 
+        System.out.println("----------------------------------------");
+
+        // My Frame
+
+        MyFrame myFrame = new MyFrame();
+
 
 
     }
