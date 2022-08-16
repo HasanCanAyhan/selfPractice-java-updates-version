@@ -14,10 +14,10 @@ public final class Task3Algorithm { // Task3
 
 
     /*
-     //Will the following class compile? If not, why? yes,compile error
+     //Will the following class compile? If not, why?  -->>> compile error
 
     public static <T> T max(T x, T y) {
-        return x > y ? x : y;
+        return x > y ? x : y; --->> numbers , generics does not accept primitive types, accept only non-primitives
     }
 
      */
