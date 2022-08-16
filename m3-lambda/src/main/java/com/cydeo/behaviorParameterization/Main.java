@@ -29,14 +29,10 @@ public class Main {
 
 
 
-
-
-
-
-
     }
 
     private static void filterApple( List<Apple> inventory, ApplePredicate applePredicate){
+        //                                                   // interface in order to take different actions
 
         List<Apple> result = new ArrayList<>();
 
