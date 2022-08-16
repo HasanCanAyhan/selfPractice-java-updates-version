@@ -13,17 +13,19 @@ public class Main { // QS 2
         // get result
 
 
-        List<Integer> ci = Arrays.asList(1, 2, 3, 4);
+        List<Integer> ci = Arrays.asList(1, 2, 3, 4); // can be also Double etc... that's why countIf method should be generics
         int count = countIf(ci, new OddPredicate());
         //int count2 = countIf(ci, new EvenPredicate());
         System.out.println("Number of odd integers = "+count);
 
 
+        //UnaryPredicate unaryPredicate = new OddPredicate();
+
     }
 
     //Write a generic method to count the number of elements in a collection
-    public static <T> int countIf(List<T> list , UnaryPredicate<T> unaryPredicate ){ // we should this method generics, in order to use in the different Type....
-        //                                      it should be parent class interface
+    public static <T> int countIf(List<T> list , UnaryPredicate<T> unaryPredicate ){ // we should this method generics, in order to use in the different Type like OddPredicate,EvenPredicate etc...
+        //                                      it should be parent class interface in order to accept OddPredicate,EvenPredicate...
         int count = 0;
 
         for (T each : list) {
