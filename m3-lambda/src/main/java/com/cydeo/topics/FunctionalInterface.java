@@ -3,8 +3,7 @@ package com.cydeo.topics;
 import com.cydeo.behaviorParameterization.Apple;
 import com.cydeo.behaviorParameterization.ApplePredicate;
 
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class FunctionalInterface {
 
@@ -39,11 +38,33 @@ public class FunctionalInterface {
 
         System.out.println("************BI CONSUMER************");
 
+        //void accept(T t, U u); take 2 parameters return anything
+        BiConsumer<Integer,Integer> addTwo = (x,y) -> System.out.println(x+y);
+        addTwo.accept(1,2);
 
 
+        System.out.println("************FUNCTION************");
+
+        // R apply(T t); it accepts 1 object return Object
+        //       <parammeter, returnType>
+        Function<String,String> fun = s -> "Hello " + s;
+        System.out.println(fun.apply("Cydeo"));
+
+        System.out.println("************BI FUNCTION************");
+
+        // R apply(T t, U u); : take 2 parameters, R return any object
+        BiFunction<Integer,Integer,Integer> func = (x1,x2) -> x1+ x2;
+        System.out.println(func.apply(2,3));
 
 
+        System.out.println("************SUPPLIER************"); // In Stream
 
+        //T get(); does not take any paramater , return something
+        Supplier<Double> randomValue = () -> Math.random();
+        System.out.println( randomValue.get() );
+
+        Supplier<String> supp = () -> "Hello Can";
+        System.out.println( supp.get() );
 
 
 
