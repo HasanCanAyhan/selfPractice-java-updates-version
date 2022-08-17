@@ -1,4 +1,4 @@
-package com.cydeo.tasks.prettyPrintAppleTask;
+package com.cydeo.lessons.readyFunctionalInterfacePractice;
 
 
 import lombok.AllArgsConstructor;
@@ -6,11 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
 @ToString
-public class Apple { // Orange
+public class Orange { // prettyAppleTest
 
     private int weight;
     private Color color;

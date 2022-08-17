@@ -1,7 +1,4 @@
-package com.cydeo.topics;
-
-import com.cydeo.behaviorParameterization.Apple;
-import com.cydeo.behaviorParameterization.ApplePredicate;
+package com.cydeo.lessons;
 
 import java.util.function.*;
 

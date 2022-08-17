@@ -1,4 +1,4 @@
-package com.cydeo.topics;
+package com.cydeo.lessons;
 
 
 public interface Sorting {

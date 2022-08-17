@@ -1,4 +1,4 @@
-package com.cydeo.topics.practice;
+package com.cydeo.lessons.readyFunctionalInterfacePractice;
 
 import java.util.ArrayList;
 import java.util.List;
