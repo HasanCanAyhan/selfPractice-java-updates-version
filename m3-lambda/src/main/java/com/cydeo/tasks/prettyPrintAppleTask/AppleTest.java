@@ -14,12 +14,17 @@ public class AppleTest {
         inventory.add(new Apple(200,Color.GREEN));
         inventory.add(new Apple(50,Color.RED));
 
+        //implementation1
         AppleFilter appleLambda = apple -> "An apple of " + apple.getWeight() + "g";
 
         prettyApple(inventory,appleLambda);
 
+        //or: you can write :
+        //prettyApple(inventory,apple -> "An apple of " + apple.getWeight() + "g");
+
         System.out.println("-----------------");
 
+        //implementation2
         AppleFilter appleLambda2 = apple -> {
 
             String str = (apple.getWeight() > 155 )?"Heavy" :"Light";
@@ -31,6 +36,7 @@ public class AppleTest {
     }
 
     private static void prettyApple(List<Apple> appleList , AppleFilter ap){
+        //                                                  Interface : accept many actions/behaviours
 
         for (Apple apple : appleList) {
            String output = ap.accept(apple);
