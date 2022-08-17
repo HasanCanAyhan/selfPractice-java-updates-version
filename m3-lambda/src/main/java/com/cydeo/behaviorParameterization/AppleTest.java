@@ -3,7 +3,7 @@ package com.cydeo.behaviorParameterization;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class AppleTest {
 
     public static void main(String[] args) {
 
@@ -21,6 +21,10 @@ public class Main {
         inventory.add(new Apple(200, Color.GREEN));
         inventory.add(new Apple(50, Color.RED));
 
+        System.out.println("**************************");
+        //NOTE : forEach() method : print each Element
+        inventory.forEach(apple -> System.out.println(apple));
+        System.out.println("**************************");
 
         HeavyApplePredicate heavyApplePredicate = new HeavyApplePredicate();
         GreenApplePredicate greenApplePredicate = new GreenApplePredicate();

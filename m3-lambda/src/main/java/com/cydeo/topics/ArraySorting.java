@@ -1,6 +1,4 @@
-package com.cydeo;
-
-import java.util.function.Predicate;
+package com.cydeo.topics;
 
 public class ArraySorting { // QuickSort,BubbleSort
 

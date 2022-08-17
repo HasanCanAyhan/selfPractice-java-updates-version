@@ -1,6 +1,6 @@
-package com.cydeo;
+package com.cydeo.topics;
 
-@FunctionalInterface
+
 public interface Sorting {
 
     public void sort();

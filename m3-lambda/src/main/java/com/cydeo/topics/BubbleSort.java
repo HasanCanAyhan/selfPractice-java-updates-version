@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.topics;
 
 public class BubbleSort implements Sorting{
     @Override
