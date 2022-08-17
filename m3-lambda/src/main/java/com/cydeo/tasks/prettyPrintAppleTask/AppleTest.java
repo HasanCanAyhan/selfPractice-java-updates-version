@@ -33,7 +33,7 @@ public class AppleTest {
     private static void prettyApple(List<Apple> appleList , AppleFilter ap){
 
         for (Apple apple : appleList) {
-           String output = ap.test(apple);
+           String output = ap.accept(apple);
             System.out.println(output);
         }
 
