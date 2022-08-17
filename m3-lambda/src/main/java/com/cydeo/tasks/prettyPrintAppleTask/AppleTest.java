@@ -7,48 +7,34 @@ public class AppleTest {
 
     public static void main(String[] args) {
 
-        List<Apple> appleList = new ArrayList<>();
+        List<Apple> inventory = new ArrayList<>();
 
-        appleList.add(new Apple(80,Color.LIGHT_GREEN));
-        appleList.add(new Apple(155,Color.HEAVY_RED));
-        appleList.add(new Apple(120,Color.LIGHT_GREEN));
+        inventory.add(new Apple(300, Color.GREEN));
+        inventory.add(new Apple(100,Color.RED));
+        inventory.add(new Apple(200,Color.GREEN));
+        inventory.add(new Apple(50,Color.RED));
 
+        AppleFilter appleLambda = apple -> "An apple of " + apple.getWeight() + "g";
 
-        // first without using Lambda
+        prettyApple(inventory,appleLambda);
 
-        AppleColor appleColor = new AppleColor();
-        prettyPrintApple(appleList,appleColor);
+        System.out.println("-----------------");
 
-        System.out.println("--------");
+        AppleFilter appleLambda2 = apple -> {
 
-        AppleWeight appleWeight = new AppleWeight();
-        prettyPrintApple(appleList,appleWeight);
+            String str = (apple.getWeight() > 155 )?"Heavy" :"Light";
+            return "A " + str + " " + apple.getColor() + " apple";
+        };
 
-
-        System.out.println("--------------------------------");
-        System.out.println("with lambda");
-
-        AppleFilter applesColor = apple -> ""+apple.getColor();
-        prettyPrintApple(appleList,applesColor);
-
-        System.out.println("--------");
-
-        AppleFilter applesWeight = apple -> ""+ apple.getWeight();
-        prettyPrintApple(appleList,applesWeight);
-
-
-
+        prettyApple(inventory,appleLambda2);
 
     }
 
-    private static void prettyPrintApple(List<Apple> appleList , AppleFilter appleFilter){
+    private static void prettyApple(List<Apple> appleList , AppleFilter ap){
 
         for (Apple apple : appleList) {
-
-            String output = appleFilter.test(apple);
-
+           String output = ap.test(apple);
             System.out.println(output);
-
         }
 
 
