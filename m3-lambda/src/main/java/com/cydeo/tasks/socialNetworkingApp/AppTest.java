@@ -16,47 +16,26 @@ public class AppTest {
         membersList.add(new Members("Edu",Gender.FEMALE,26));
         membersList.add(new Members("Joe",Gender.MALE,22));
 
+        MessageInterface mILambda = members -> members.getGender().equals(Gender.MALE)
+                && members.getAge() >= 18 && members.getAge() <= 25;
 
-        message(membersList,new MaleMembers(),"wie geht es?");
-
-        message(membersList,new MaleMembers(),"Fine");
-
-        System.out.println("------------------------------------");
-
-        System.out.println("With Lambda:");
-
-        FeatureInterface test1 = members ->  members.getGender() == Gender.MALE;
-
-        message(membersList,test1,"good job");
-
-        FeatureInterface test2 = members -> {
-
-            if (members.getGender() == Gender.MALE){
-                return members.getAge() > 18 && members.getAge() < 25;
-            }
-            return false;
-        };
-
-        message(membersList,test2,"I am fine thanks");
+        printMessage(membersList,mILambda);
 
 
     }
 
-    private static void message(List<Members> membersList, FeatureInterface featureInterface,String message){
+    private static void printMessage(List<Members> membersList, MessageInterface mI){
 
-        for (Members members : membersList) {
+        for (Members eachMember : membersList) {
 
-            if (featureInterface.test_sendingMessage(members)){
-                System.out.println(message + " is sent to " + members.getName());
+            if (mI.test_sendingMessage(eachMember)){
+                System.out.println(eachMember);
             }
-
 
         }
 
 
     }
-
-
 
 }
 /*
