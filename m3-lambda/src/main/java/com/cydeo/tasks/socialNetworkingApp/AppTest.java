@@ -15,6 +15,7 @@ public class AppTest {
         membersList.add(new Member("Edu",Gender.FEMALE,26));
         membersList.add(new Member("Joe",Gender.MALE,22));
 
+        //implementations for test method
         MessageInterface mILambda = member -> member.getGender() == (Gender.MALE)
                 && member.getAge() >= 18 && member.getAge() <= 25;
 
