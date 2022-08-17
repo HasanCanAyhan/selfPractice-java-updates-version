@@ -10,7 +10,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Members {
+public class Member {
 
     private String name;
     private Gender gender;

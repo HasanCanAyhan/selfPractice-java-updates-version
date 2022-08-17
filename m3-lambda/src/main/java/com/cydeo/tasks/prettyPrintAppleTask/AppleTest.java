@@ -40,6 +40,7 @@ public class AppleTest {
 
         for (Apple apple : appleList) {
            String output = ap.accept(apple);
+           // we did not implement inside the method yet, with Lambda we can put inside the method different implementations
             System.out.println(output);
         }
 
