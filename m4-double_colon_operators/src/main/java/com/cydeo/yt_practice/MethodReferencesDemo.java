@@ -1,4 +1,4 @@
-package yt_practice;
+package com.cydeo.yt_practice;
 
 import java.util.*;
 import java.util.function.BiFunction;
