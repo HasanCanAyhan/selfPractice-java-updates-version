@@ -18,9 +18,9 @@ public class AppleTest {
         inventory.add(new Apple(200,Color.GREEN));
         inventory.add(new Apple(50,Color.RED));
 
-        //based on weight : if you want to sort the object property, use comparing method
-
         //COMPARATOR.COMPARING Static Function : accepts a sort key Function and returns a Comparator for the type which contains the sort key
+
+        //based on weight : if you want to sort the object property, use comparing method
 
         //                                                  Function Interface
         Comparator<Apple> sortApple = Comparator.comparing( apple -> apple.getWeight()  );
