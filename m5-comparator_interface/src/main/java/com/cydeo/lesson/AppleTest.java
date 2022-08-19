@@ -49,6 +49,7 @@ public class AppleTest {
 
         System.out.println("------DESCENDING-------------------");
 
+        //Comparator interface includes a default method reversed that reverses the ordering of a given comparator.
         //using reverse() method
 
         inventory.sort(comparing(Apple::getWeight).reversed());
