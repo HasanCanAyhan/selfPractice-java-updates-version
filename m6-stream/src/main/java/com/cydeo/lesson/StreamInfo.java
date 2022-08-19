@@ -16,6 +16,7 @@ public class StreamInfo {
     next one, Terminal Operation: after completed operations, we need to take collection from Stream, from the flow, otherweise, it will be inside the forever circle
     exit the collection to outside and use it.
 
+    Source->Filter->Sort->Map->Collect
 
 
 
