@@ -30,7 +30,7 @@ public class AppleTest {
         inventory.sort(sortApple);// sort method waiting for action
         System.out.println(inventory);
 
-        System.out.println("------------Can I call the static method without ClassName : yes by importing-------------------------------------");
+        System.out.println("------------Can I call the static method without ClassName : yes by importing Class name-------------------------------------");
 
         //Can I call the static method without ClassName : yes by importing
 
@@ -47,8 +47,20 @@ public class AppleTest {
         System.out.println(inventory);
 
 
+        System.out.println("------DESCENDING-------------------");
 
+        //using reverse() method
 
+        inventory.sort(comparing(Apple::getWeight).reversed());
+        System.out.println(inventory);
+
+        System.out.println("------------CHAINING-----------------------");
+
+        inventory.sort(comparing(Apple::getWeight)
+                .reversed()
+                .thenComparing(Apple::getColor));
+
+        System.out.println(inventory);
 
 
     }
