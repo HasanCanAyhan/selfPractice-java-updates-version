@@ -1,6 +1,7 @@
 package com.cydeo.lesson;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -76,6 +77,12 @@ public class Main {
 
         //if the method is an instance method, either call by creating object with new keyword,
         //or use Functional interface which takes argument ClassName(ex:MyClass), then you do not need to create object, call it through ClassName::methodName
+
+
+        Consumer<Integer> display = i -> System.out.println(i);
+        Consumer<Integer> displayMethodRef = System.out::println;
+        displayMethodRef.accept(10);
+
 
 
     }
