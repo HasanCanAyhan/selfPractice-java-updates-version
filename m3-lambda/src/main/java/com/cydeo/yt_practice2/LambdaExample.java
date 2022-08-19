@@ -43,14 +43,33 @@ public class LambdaExample {
         String str = "hello";
 
         Shape rectangle = () -> System.out.println("Rectangle class : draw() method ");
-        rectangle.draw();
+        //rectangle.draw();
 
         Shape square = () -> System.out.println("Square class : draw() method ");
-        square.draw();
+        //square.draw();
 
         Shape circle = () -> System.out.println("Circle class : draw() method ");
-        circle.draw();
+        //circle.draw();
+
+        System.out.println("---------------------------------------");
+        //Pass Lambda as Method Parameter
+
+        print(rectangle);
+
+        //or
+
+        //print(  () -> System.out.println("Rectangle class : draw() method ")   );
+
+        print(square);
+        print(circle);
+
 
     }
+
+   //Pass Lambda as Method Parameter
+   private static void print(Shape shape){
+        shape.draw();
+   }
+
 
 }
