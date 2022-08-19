@@ -22,6 +22,14 @@ public class LambdaParameters {
         int result = addableLambda.addition(10,20);
         System.out.println(result);
 
+        System.out.println("-------------------------------------");
+
+        Addable abc = (x,y) -> {
+
+            int c = (x+y);
+            return c;
+
+        };
 
 
 
