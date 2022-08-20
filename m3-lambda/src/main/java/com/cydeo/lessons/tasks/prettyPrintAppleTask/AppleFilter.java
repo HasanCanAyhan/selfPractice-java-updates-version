@@ -1,4 +1,4 @@
-package com.cydeo.tasks.prettyPrintAppleTask;
+package com.cydeo.lessons.tasks.prettyPrintAppleTask;
 
 public interface AppleFilter {
 

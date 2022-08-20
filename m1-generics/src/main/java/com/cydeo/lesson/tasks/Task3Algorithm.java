@@ -1,4 +1,4 @@
-package com.cydeo.tasks;
+package com.cydeo.lesson.tasks;
 
 public final class Task3Algorithm { // Task3
 

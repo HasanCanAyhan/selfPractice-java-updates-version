@@ -1,4 +1,4 @@
-package com.cydeo.tasks.socialNetworkingApp;
+package com.cydeo.lessons.tasks.socialNetworkingApp;
 
 import java.util.ArrayList;
 import java.util.List;

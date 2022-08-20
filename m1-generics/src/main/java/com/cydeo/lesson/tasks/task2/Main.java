@@ -1,4 +1,4 @@
-package com.cydeo.tasks.task2;
+package com.cydeo.lesson.tasks.task2;
 
 import java.util.Arrays;
 import java.util.List;

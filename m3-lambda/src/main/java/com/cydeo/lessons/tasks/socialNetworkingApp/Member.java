@@ -1,4 +1,4 @@
-package com.cydeo.tasks.socialNetworkingApp;
+package com.cydeo.lessons.tasks.socialNetworkingApp;
 
 
 import lombok.AllArgsConstructor;

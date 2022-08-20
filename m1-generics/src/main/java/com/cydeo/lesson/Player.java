@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.lesson;
 
 public abstract class Player {
 

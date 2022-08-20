@@ -1,4 +1,4 @@
-package com.cydeo.tasks.prettyPrintAppleTask;
+package com.cydeo.lessons.tasks.prettyPrintAppleTask;
 
 import java.util.ArrayList;
 import java.util.List;
