@@ -8,6 +8,8 @@ import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamMapCollectExample {
 
@@ -43,10 +45,22 @@ public class StreamMapCollectExample {
 
         System.out.println("------------using Lambda---------------------------------");
 
-        users.stream().map( user ->  new UserDTO(user.getId(), user.getUserName(), user.getEmail())  )
-                .forEach(System.out::println);
+        Stream<UserDTO>  userDTOStream  = users.stream().map(user ->  new UserDTO(user.getId(), user.getUserName(), user.getEmail())  );
+        userDTOStream.forEach(System.out::println);
 
+        //or : you can write:
 
+        /*
+       users.stream().map(user ->  new UserDTO(user.getId(), user.getUserName(), user.getEmail())  )
+               .forEach(System.out::println);
+         */
+
+        System.out.println("----If you want to convert Stream to List-->>>>> use .collect(Collectors.toList)--------");
+
+       List<UserDTO> userDTOList =  users.stream().map(user -> new UserDTO(user.getId(), user.getUserName(), user.getEmail()))
+                .collect(Collectors.toList());
+
+       userDTOList.forEach(System.out::println);
 
     }
 
