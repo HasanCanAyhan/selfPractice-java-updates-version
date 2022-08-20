@@ -43,10 +43,11 @@ public class DiskTask {
         Stream<String> stringStream =   DishData.getAll().stream()
                 .filter(dish -> dish.getCalories()< 400) // we should sort according to Calories
                 .sorted(Comparator.comparing(Dish::getCalories).reversed())
-                .map(Dish::getName);
+                .map(Dish::getName); // right now we have only names of dish
 
         stringStream.forEach(System.out::println);
 
+        //Stream<Dish> dishStream =  DishData.getAll().stream();
 
     }
 
