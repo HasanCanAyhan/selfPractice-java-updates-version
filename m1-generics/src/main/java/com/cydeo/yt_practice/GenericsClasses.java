@@ -3,7 +3,9 @@ package com.cydeo.yt_practice;
 import java.sql.Array;
 import java.util.ArrayList;
 
-class MyGenericClass<T>{ // T : Thing
+class MyGenericClass<T extends Number>{ // T : Thing
+    //                  bounded types = you can create the objects of a generic class
+    //                  to have data of specific derived types ex.Number
 
     T x;
 
@@ -25,13 +27,14 @@ public class GenericsClasses {
 
         MyGenericClass<Integer> myInt = new MyGenericClass<>(1);
         MyGenericClass<Double> myDouble = new MyGenericClass<>(3.14);
-        MyGenericClass<Character> myChar = new MyGenericClass<>('@');
-        MyGenericClass<String> myStr = new MyGenericClass<>("Hello");
+
+        //MyGenericClass<Character> myChar = new MyGenericClass<>('@');
+        //MyGenericClass<String> myStr = new MyGenericClass<>("Hello");
 
         System.out.println(myInt.getValue());
         System.out.println(myDouble.getValue());
-        System.out.println(myChar.getValue());
-        System.out.println(myStr.getValue());
+        //System.out.println(myChar.getValue());
+        //System.out.println(myStr.getValue());
 
 
     }
