@@ -25,6 +25,8 @@ public class GenericsClasses {
 
     public static void main(String[] args) {
 
+        // T extends Number!!!!
+
         MyGenericClass<Integer> myInt = new MyGenericClass<>(1);
         MyGenericClass<Double> myDouble = new MyGenericClass<>(3.14);
 
