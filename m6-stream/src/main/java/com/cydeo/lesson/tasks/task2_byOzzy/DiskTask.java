@@ -45,8 +45,6 @@ public class DiskTask {
                 .map(Dish::getName)
                 .forEach(System.out::println);
 
-        
-
 
 
     }
