@@ -3,6 +3,7 @@ package com.cydeo.yt_practice;
 import java.util.*;
 import java.util.stream.Stream;
 
+//https://youtu.be/8yyHwQtnOj4
 public class CreatingStreamObject {
 
     public static void main(String[] args) {

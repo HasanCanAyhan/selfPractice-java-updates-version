@@ -72,12 +72,38 @@ public class StreamListSorting {
         employees.add(new Employee(30,"Sanjay",30,450000));
         employees.add(new Employee(40,"Pramod",29,500000));
 
+        System.out.println("--------------------ASCENDING ORDER-----------------------------------");
+
        List<Employee> employeeSortedList =
                employees.stream()
-                       .sorted((Employee o1, Employee o2) -> (int) (o1.getSalary() - o2.getSalary())
-                       ).collect(Collectors.toList());
+                       .sorted((Employee o1, Employee o2) -> (int) (o1.getSalary() - o2.getSalary()))
+                       .collect(Collectors.toList());
 
-        System.out.println(employeeSortedList);
+        System.out.println("employeeSortedList = " + employeeSortedList);
+
+
+        System.out.println("--------------------ASCENDING ORDER-----------------------------------");
+       // or : using Comparator :Ascending order
+       
+        List<Employee> employeeSortedList2 =
+                employees.stream()
+                        .sorted(Comparator.comparing(Employee::getSalary))
+                        .collect(Collectors.toList());
+
+        System.out.println("employeeSortedList2 = " + employeeSortedList2);
+
+
+        System.out.println("--------------------DESCENDING ORDER-----------------------------------");
+
+        List<Employee> employeeSortedList3 =
+                employees.stream()
+                        .sorted(Comparator.comparing(Employee::getSalary).reversed())
+                        .collect(Collectors.toList());
+
+        System.out.println("employeeSortedList3 = " + employeeSortedList3);
+
+
+
 
 
     }
