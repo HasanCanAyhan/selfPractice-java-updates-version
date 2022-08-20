@@ -1,6 +1,7 @@
 package com.cydeo.lesson.tasks.task2_byOzzy;
 
 import java.util.Comparator;
+import java.util.stream.Stream;
 
 public class DiskTask {
 
@@ -39,12 +40,12 @@ public class DiskTask {
 
         System.out.println("print all dish name that are below 400 calories in sorted");
 
-        DishData.getAll().stream()
-                .filter(dish -> dish.getCalories()< 400)
+        Stream<String> stringStream =   DishData.getAll().stream()
+                .filter(dish -> dish.getCalories()< 400) // we should sort according to Calories
                 .sorted(Comparator.comparing(Dish::getCalories).reversed())
-                .map(Dish::getName)
-                .forEach(System.out::println);
+                .map(Dish::getName);
 
+        stringStream.forEach(System.out::println);
 
 
     }
