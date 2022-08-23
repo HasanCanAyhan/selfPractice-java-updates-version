@@ -4,6 +4,14 @@ import java.time.LocalDate;
 
 public interface PrivateMethodInterface {
 
+
+      /* Usage of default methods in the Interface
+    Let's say that you have multiple classes that is implementing the same interface,
+    instead of overriding the method and implementing it,
+    by default all the classes implementing that interface will have the same implementation.
+     */
+
+
     boolean isHoliday(LocalDate date);
 
     default boolean isBusinessDay(LocalDate date){
