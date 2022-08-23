@@ -1,6 +1,7 @@
 package com.cydeo.lesson;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BigDecimalDemo {
 
@@ -37,7 +38,23 @@ public class BigDecimalDemo {
         System.out.println(b4.multiply(BigDecimal.valueOf(15.56)));
 
 
+        System.out.println("------------------------------------------------------------");
 
+        //Scaling method
+        BigDecimal number1 = new BigDecimal("23.12");
+        System.out.println(number1.setScale(1, RoundingMode.CEILING)); // 23.2 - up
+        System.out.println(number1.setScale(1, RoundingMode.FLOOR)); // 23.1 - down
+        System.out.println(number1.setScale(2, RoundingMode.CEILING)); // 23.12
+        System.out.println(number1.setScale(2, RoundingMode.FLOOR)); //23.12
+
+
+        System.out.println("------------------------------------------------------------");
+
+        //DO NOT use Equals().   USE CompareTo()
+
+        System.out.println(new BigDecimal("2").compareTo(new BigDecimal("2")));//0 : equals
+        System.out.println(new BigDecimal("3").compareTo(new BigDecimal("2")));//1 : first greater
+        System.out.println(new BigDecimal("1").compareTo(new BigDecimal("2")));//-1 : first less than
 
 
 
