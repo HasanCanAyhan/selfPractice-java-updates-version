@@ -25,6 +25,7 @@ public interface PrivateMethodInterface {
         return isHoliday(nextDate) ? nextDay(nextDate): nextDate;
     }
 
+    //private method
     private void validate(LocalDate date){
         if(date.isBefore(LocalDate.of(2001,1,1))){
             throw new IllegalArgumentException();
