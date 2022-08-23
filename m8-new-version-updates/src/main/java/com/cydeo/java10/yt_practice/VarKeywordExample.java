@@ -1,6 +1,7 @@
 package com.cydeo.java10.yt_practice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class VarKeywordExample {
 
@@ -31,7 +32,11 @@ public class VarKeywordExample {
 
         //var myLambda =  () -> System.out.println("Hello"); --->>> you can not use!
 
-
+        var courses = List.of("Java", "Spring", "Agile", "Github");
+        for (var course : courses) {
+            System.out.println(course);
+        }
+        System.out.println("");
 
 
     }
