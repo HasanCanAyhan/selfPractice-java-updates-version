@@ -1,9 +1,10 @@
-package com.cydeo.java12.yt_practice;
+package com.cydeo.java12.teeingPractice1;
 
 import java.util.*;
-import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
+
+//https://youtu.be/7GmIHdGptps
 public class TeeingMethodDemo {
 
     public static void main(String[] args) {
