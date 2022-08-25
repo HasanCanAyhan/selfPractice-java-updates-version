@@ -11,4 +11,11 @@ public record User(String name, String address) {
     // EQUALS
     // HASH CODE
 
+    public static String nameUpperCase(User user){
+
+        return user.name.toUpperCase();
+
+    }
+
+
 }
