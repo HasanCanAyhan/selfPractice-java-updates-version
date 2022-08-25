@@ -7,7 +7,19 @@ import java.util.stream.Stream;
 public class GuestTask {
 
     public static void main(String[] args) {
+        /* teeing():
+        It is a new static method teeing to java.util.stream.Collectors interface which
+        allows to collect using two independent collectors, then merge their results using the
+        supplied BiFunction.
 
+        Every element passed to the resulting collector is processed by both downstream
+        collectors, then their results are merged using the specified merge function into the
+        final result.
+
+        Please note that this function helps in performing a certain task in single steps. We
+        can already perform the given task in two steps if we do not use
+        the teeing() function.
+         */
 
         EventParticipation collect = Stream.of(
                         // Guest(String name, boolean participating, Integer participantsNumber)
