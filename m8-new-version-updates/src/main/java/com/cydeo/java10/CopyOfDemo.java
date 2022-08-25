@@ -9,12 +9,9 @@ public class CopyOfDemo {
 
         List<Integer> numberList = Arrays.asList(2,4,6,8);
 
-        List<Integer> unmodifiableList2 = List.of(2,4,6,8); // takes values
+        List<Integer> unmodifiableList2 = List.of(2,4,6,8); // takes values, only to read
 
-        List<Integer> unmodifiableList =List.copyOf(numberList); // takes list
-
-
-        
+        List<Integer> unmodifiableList =List.copyOf(numberList); // takes list, only to read
 
     }
 
