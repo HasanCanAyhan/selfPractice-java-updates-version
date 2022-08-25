@@ -4,7 +4,6 @@ public record User(String name, String address) {
 
     //private final
 
-
     // All ARG CONST
     // GETTER
     // TO STRING
