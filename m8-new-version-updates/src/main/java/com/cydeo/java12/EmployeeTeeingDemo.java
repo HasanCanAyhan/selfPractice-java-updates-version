@@ -23,7 +23,7 @@ public class EmployeeTeeingDemo {
                         Collectors.maxBy(Comparator.comparing(employee -> employee.getSalary())),// downstream1
                         Collectors.minBy(Comparator.comparing(employee -> employee.getSalary())),// downstream2
 
-                        //BiFunction
+                        //BiFunction : takes 2 parameter return any object here : Map
                         (eMaxSalary, eMinSalary) -> {
 
                             Map<String, Employee> map = new HashMap<>();
