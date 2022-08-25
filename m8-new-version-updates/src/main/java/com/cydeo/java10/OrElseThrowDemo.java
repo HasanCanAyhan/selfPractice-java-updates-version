@@ -18,8 +18,8 @@ public class OrElseThrowDemo {
             // exception handling
         }
 
-        System.out.println(str.orElseThrow());
-        System.out.println(str.orElseThrow(() -> new RuntimeException()));
+        //System.out.println(str.orElseThrow());
+        //System.out.println(str.orElseThrow(() -> new RuntimeException("string is null")));
 
 
     }
