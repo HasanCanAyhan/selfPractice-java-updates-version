@@ -14,6 +14,8 @@ public class Map_FlatMap {
 
         //one to one mapping, because one customer has one email
 
+        //producing a single value for each input value
+
         List<String> emails = customers.stream().map(customer -> customer.getEmail()).collect(Collectors.toList());
         System.out.println(emails);
 
@@ -21,6 +23,9 @@ public class Map_FlatMap {
         System.out.println("----------------------------------------------------");
 
         //FlatMap()
+
+
+        //producing a multiple values for each input value
 
         //one to many , one customer has more phone numbers
         List<String> phones = customers.stream()
