@@ -3,6 +3,9 @@ package com.cydeo.yt_practice2;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//https://youtu.be/CwvlS3ViGFQ
+
+
 public class Map_FlatMap {
 
     public static void main(String[] args) {
