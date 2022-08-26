@@ -23,12 +23,11 @@ public class Map_FlatMap {
         //FlatMap()
 
         //one to many , one customer has more phone numbers
-        customers.stream()
+        List<String> phones = customers.stream()
                 .flatMap(customer -> customer.getPhoneNumbers().stream())
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
 
-
-
+        System.out.println(phones);
 
     }
 
