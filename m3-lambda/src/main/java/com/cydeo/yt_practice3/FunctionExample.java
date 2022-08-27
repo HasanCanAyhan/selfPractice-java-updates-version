@@ -1,9 +1,6 @@
 package com.cydeo.yt_practice3;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 //https://youtu.be/5K4eVKCpuHQ
 public class FunctionExample {
@@ -51,6 +48,16 @@ public class FunctionExample {
 
         System.out.println(stringIntegerMap);
 
+
+        System.out.println("--------example5-------------------------");
+
+        List<String> namesList = Arrays.asList("Can","John","Lucy","Ermek");
+
+        Function<String,String> function4 = x -> x.toUpperCase().charAt(0) + "." + x.toUpperCase().charAt(x.length()-1);
+
+        System.out.println( convertListToMap2(namesList,function4) );
+
+
     }
 
     private static <T,R> Map<T,R> convertListToMap(List<T> list, Function<T,R> function){
@@ -64,5 +71,21 @@ public class FunctionExample {
 
 
     }
+
+
+    private static<T,V> Map<T,V>  convertListToMap2(List<T> list , Function<T,V> function){
+
+        Map<T,V> map = new LinkedHashMap<>();
+
+        for (T t : list) {
+
+            map.put(t,function.apply(t));
+
+        }
+
+        return map;
+
+    }
+
 
 }
