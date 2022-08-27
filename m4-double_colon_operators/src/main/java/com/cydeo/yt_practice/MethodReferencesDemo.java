@@ -105,12 +105,26 @@ public class MethodReferencesDemo {
         System.out.println(setFunctionMethodRef.apply(fruits));
 
 
+        System.out.println("---------Convert list to map-----------------------------------");
+
+        Function<String, String > function1 = ( s ) -> s.charAt(0) + "." + s.charAt(s.length()-1);
+
+        Map<String,String> listToMap = convertListToMap(fruits,function1);
+        System.out.println(listToMap);
 
 
 
     }
 
+    private static Map<String, String> convertListToMap(List<String> fruits, Function<String, String> function1) {
 
+        Map<String,String> map = new LinkedHashMap<>();
+
+        //fruits.forEach(s -> map.put(s,function1.apply(s)));
+        fruits.forEach(s -> map.put(function1.apply(s),s));
+
+        return map;
+    }
 
 
 }
