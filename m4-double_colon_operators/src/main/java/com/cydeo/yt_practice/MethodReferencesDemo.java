@@ -113,7 +113,6 @@ public class MethodReferencesDemo {
         System.out.println(listToMap);
 
 
-
     }
 
     private static Map<String, String> convertListToMap(List<String> fruits, Function<String, String> function1) {
