@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 //https://youtu.be/FOJYM8q4X1k
 
-public class BiFunction_AndThen {
+public class BiFunction_AndThenPractice {
 
     public static void main(String[] args) {
 
