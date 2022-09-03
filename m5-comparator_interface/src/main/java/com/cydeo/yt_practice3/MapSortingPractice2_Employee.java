@@ -5,10 +5,12 @@ import com.cydeo.yt_practice.Employee;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class MapSortingPractice2_Employee {
 
     public static void main(String[] args) {
+
 
         Map<Employee,Integer> employeeMap = new TreeMap<>(new Comparator<Employee>() {
             @Override
@@ -16,6 +18,9 @@ public class MapSortingPractice2_Employee {
                 return (int) (o1.getSalary()-o2.getSalary());
             }
         });
+
+        //using lambda
+        //Map<Employee,Integer> employeeMap = new TreeMap<>( (o1,o2)-> (int) (o1.getSalary() - o2.getSalary()));
 
         employeeMap.put( (new Employee(10,"Karl",27,50_000)),60 );
         employeeMap.put( (new Employee(20,"Edu",30,55_000)),90 );
@@ -27,8 +32,15 @@ public class MapSortingPractice2_Employee {
 
         System.out.println("---------------------------------------------------------");
 
+        employeeMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee :: getSalary)))
+                .forEach(System.out::println);
 
+        System.out.println("---------------------------------------------------------");
 
+        employeeMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getAge)))
+                .forEach(System.out::println);
 
 
     }
