@@ -19,7 +19,7 @@ public class StringMethods {
 
         //lines(): It is used to get all the lines in a String as a Stream.
 
-        var str = "Mike \n Ozzy \n Tom \n Emmy";
+        var str = "Mike\nOzzy\nTom\nEmmy";
 
         str.lines().forEach(System.out::println);
 
