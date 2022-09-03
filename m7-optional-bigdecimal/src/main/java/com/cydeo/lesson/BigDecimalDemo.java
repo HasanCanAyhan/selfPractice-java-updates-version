@@ -7,6 +7,14 @@ public class BigDecimalDemo {
 
     public static void main(String[] args) {
 
+        /*
+        1- with new keyword
+        2- with valueOf() method
+        3- with CONSTANT values
+
+         */
+
+
         double amount1 = 374.56;
         double amount2 = 374.26;
 
