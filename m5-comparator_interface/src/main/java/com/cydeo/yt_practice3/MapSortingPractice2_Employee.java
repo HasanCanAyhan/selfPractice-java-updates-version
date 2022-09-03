@@ -42,6 +42,13 @@ public class MapSortingPractice2_Employee {
                 .sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getAge)))
                 .forEach(System.out::println);
 
+        System.out.println("---------------------------------------------------------");
+
+        //byValue
+        employeeMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .forEach(System.out::println);
+
 
     }
 
