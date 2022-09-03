@@ -74,6 +74,11 @@ public class Main {
 
         Function<Integer,Double>  function3MethodRef = new MyClass()::method;
         BiFunction<MyClass,Integer,Double> f = MyClass::method;
+        f.apply(new MyClass(),10);
+
+        BiFunction<Calculator,Integer,String> biFunc = Calculator::convertString;
+        String s = biFunc.apply(new Calculator(),5);
+        System.out.println(s);
 
         //if the method is an instance method, either call by creating object with new keyword,
         //or use Functional interface which takes argument ClassName(ex:MyClass), then you do not need to create object, call it through ClassName::methodName

@@ -10,5 +10,8 @@ public class Calculator {
         System.out.println("Multiply " + (x * y));
     }
 
+    public String convertString(int x ){
+        return Integer.toString(x);
+    }
 
 }
