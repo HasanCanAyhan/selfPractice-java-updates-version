@@ -114,6 +114,29 @@ public class MethodReferencesDemo {
         System.out.println(listToMap);
 
 
+        System.out.println("---------Convert list to map 2-----------------------------------");
+
+        List<Integer> list = Arrays.asList(1,1,2,2,3,3,3,4,5,6,7);
+
+        Function<Integer,Integer> function2 = n -> n*5;
+
+        Map<Integer, Integer> map = convertListToMap2(list, function2);
+        System.out.println("map = " + map);
+
+
+    }
+
+    private static Map<Integer, Integer> convertListToMap2(List<Integer> list, Function<Integer, Integer> function2) {
+
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
+        for (Integer integer : list) {
+
+            map.put(integer,function2.apply(integer));
+
+        }
+
+        return map;
     }
 
     private static Map<String, String> convertListToMap(List<String> fruits, Function<String, String> function1) {
