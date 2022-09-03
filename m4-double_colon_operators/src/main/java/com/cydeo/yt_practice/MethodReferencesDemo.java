@@ -52,6 +52,7 @@ public class MethodReferencesDemo {
         BiFunction<Integer,Integer,Integer> biFunctionMethodRef = MethodReferencesDemo::addition;
         System.out.println(biFunctionMethodRef.apply(5,6));
 
+
         System.out.println("------------------------------2.instanceMethod-------------------------------------");
 
         // 2.Reference to an instance method of a particular object ->> Object::instanceMethodName
