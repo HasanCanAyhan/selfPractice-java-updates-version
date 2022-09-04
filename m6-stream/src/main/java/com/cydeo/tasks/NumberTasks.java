@@ -3,6 +3,7 @@ package com.cydeo.tasks;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class NumberTasks {
 
@@ -25,6 +26,7 @@ public class NumberTasks {
             • List<Integer> numbers2 = Arrays.asList(3,4);
             • List<int[]> pairs = ?????
          */
+
 
         List<Integer> numbers1 = Arrays.asList(1,2,3);
         List<Integer> numbers2 = Arrays.asList(3,4);
