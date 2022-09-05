@@ -24,7 +24,7 @@ public class FindDuplicateElements_Stream {
 
         Set<Integer> set = new HashSet<>();
 
-        list.stream().filter(x -> !set.add(x)).collect(Collectors.toSet()).forEach(System.out::println);
+        list.stream().filter(x -> !set.add(x)).peek( x -> System.out.println("num " + x)).collect(Collectors.toSet()).forEach(System.out::println);
 
 
     }
