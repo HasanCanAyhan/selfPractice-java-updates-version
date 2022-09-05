@@ -29,7 +29,7 @@ public class TestTakeAfter_vs_DropAfter_Method {
 
         myEmployeeList.stream()
                 .sorted(Comparator.comparing(MyEmployee::getSalary))
-                .dropWhile(myEmployee -> myEmployee.getSalary()< 70_000 )
+                .dropWhile(myEmployee -> myEmployee.getSalary()<= 70_000 )
                 .forEach(System.out::println);
 
 
